@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+body{
+    background-color: #e7e7e7;
+}
+
 header{
     margin: 10px 20px;
     display: flex;
@@ -24,7 +28,7 @@ h1{
 nav{
     width: auto;
     height: 70px;
-    background-color: #fff;
+    background-color: #e7e7e7;
     display: flex;
     align-items: center;
     position: relative;
@@ -39,11 +43,16 @@ button{
 }
 
 nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    border: solid 2px #000;
     margin: 0 20px;
     cursor: pointer;
 }
 
-nav button{
+nav a button{
     margin: 0 20px;
     cursor: pointer;
     background-color: transparent;
@@ -62,11 +71,20 @@ nav .icon{
 @media (max-width: 600px){
 
     header{
-        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    h1{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
     }
 
     nav a{
         display: none;
+        border: none;
     }
 
     nav .icon{
@@ -88,7 +106,7 @@ nav .icon{
 
     nav.responsive #onglet:hover{
         transition: ease 0.5s;
-        background-color: cadetblue;
+        background-color: #fff;
     }
 
     nav.responsive button{
