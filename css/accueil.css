@@ -68,7 +68,7 @@ nav .icon{
     color: #000;
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
 
     header{
         justify-content: flex-end;
