@@ -15,8 +15,14 @@
     
 }
 
-.encadrement h1, h3, h4, ul, p{
+.encadrement h1{
     margin-left: 5vw;
+    color: white;
+}
+.encadrement h3, h4, ul, p{
+    margin-left: 5vw;
+    color: white;
+    font-size: large;
 
 }
 
