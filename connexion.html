@@ -1,46 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/accueil.css">
     <link rel="stylesheet" href="css/formulaire.css">
-    <title>Connexion</title>
+    <title>Document</title>
 </head>
 <body>
-    
-    <div>
-        <a href="index.html">
-            <button class="boutonRetour">
-                Retour 
-            </button>
-        </a>
-    </div>
+    <header>
 
-    <div class="conteneur">
-        <form>
-            <div class="form connexion" id="connexion">
-                <span class="titre"> Connexion </span>
+        <h1>Les Madeleines de Prost</h1>
+        <nav id="navbar" class="nav">
+            <a id="onglet" href="recette.html"> <!-- A changer !!! -->
+                <button>
+                    Recettes
+                </button>
+            </a>
+            <a id="onglet" href="connexion.html"> <!-- A changer !!! -->
+                <button>
+                    Connexion <br> Inscription
+                </button>
+            </a>
+            <a class="icon" onclick="myFunction()">&#9776;</a>
+        </nav>
 
-                <div class="champ-saisie">
-                    <input type="text" name="nom" placeholder="entrez votre nom">
-                </div>
-                <div class="champ-saisie">
-                    <input type="text" name="mdp" placeholder="entrez votre mot de passe">
-                </div>
-                <div class="champ-saisie bouton">
-                    <input type="submit" name="connexion" value="Se connecter">
-                </div>
-                <div class="connexion-inscription">
-                    <span class="text">Pas de compte ?
-                        <a href="inscription.html" class="texte inscription-lien">Inscrivez-vous</a>
-                    </span>
-                </div>
-                <div class="motDePasse">
-                        <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
-                </div>
-            </div>
+    </header>
+    <section>
         <form>
-    </div>
+            <span class="titre"> Connexion </span>
+            <input type="text" name="nom" placeholder="entrez votre nom">
+            <input type="text" name="mdp" placeholder="entrez votre mot de passe">
+            <input type="submit" name="connexion" class="connexion" value="Se connecter">
+            <span class="text">Pas de compte ?
+                <a href="inscription.html" class="texte inscription-lien">Inscrivez-vous</a>
+            </span>
+            <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
+        <form>
+    </section>
 </body>
-</html

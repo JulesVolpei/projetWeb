@@ -4,144 +4,61 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Satisfy', cursive;
-}
-
-body{
-    display: flex;
-    background-color: #e7e7e7;
-    margin-left: 5%;
-}
-
-input {
-    width: 250px;
-}
-
-.conteneur {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background: #3f3937;
-    width: 50vw;
-    padding: 30px;
-    margin-top: 30px;
-  }
-
-.conteneur form{
-    width: 340px;
-    transition: margin-left 0.18s ease;
-    margin: auto;
-    
-  }
-
-
-.connexion-inscription{
     font-family: 'Abril Fatface', cursive;
-    font-size: 16px;
-    margin-left: 35px;
-    color: #e7e7e7;
-    margin-top: 20px;
-} 
-
-.motDePasse{
-    font-family: 'Abril Fatface', cursive;
-    font-size: 16px;
-    margin-left: 35px;
-} 
-
-
-
-.conteneur form .titre{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: #e7e7e7;
-    font-size: 40px;
-    font-weight: 400;
-}
-
-form .champ-saisie{
-    position: relative;
-    height: 50px;
-    width: 100%;
-    margin-top: 30px;
-    
-}
-
-.champ-saisie input{
-    position: absolute;
-    font-family: 'Abril Fatface', cursive;
-    height: 100%;
-    padding: 0 35px;
-    outline: none;
-    font-size: 16px;
-    border-bottom: 2px solid black;
-    border-top: 2px solid transparent;
-    transition: all 0.2s ease;
-}
-
-.champ-saisie input:is(:focus, :valid){
-    border-bottom-color: black;
-}
-
-.champ-saisie i{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #e7e7e7;
-    font-size: 23px;
-    transition: all 0.2s ease;
-}
-
-.champ-saisie input:is(:focus, :valid) ~ i{
-    color: #e7e7e7;
-}
-
-form .texte{
-    color: #333;
-    font-size: 14px;
-}
-
-form a.texte{
-    color: grey;
+    color: #fff;
     text-decoration: none;
 }
 
-form a:hover{
-    text-decoration: underline;
-}
-
-form .bouton{
-    margin-top: 35px;
-    margin-left: 35px;
-}
-
-form .bouton input{
-    border: none;
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    background-color: #3f3937;
-    border: solid 2px white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.bouton input:hover{
-    background-color: black;
-}
-
-
-.boutonRetour{
-    margin-top: 40px;
-    padding: 30px;
-    border: solid 2px black;
+body{
     background-color: #e7e7e7;
-    transition: 0.4s;
-    font-size: 1em;
-    width: 200px;
-    cursor: pointer;
-    font-family: 'Abril Fatface', cursive;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   
+    width: 100%;
+}
+
+form{
+    width: 600px;
+    padding: 50px;
+    background: #3f3937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titre{
+    font-family: 'Satisfy', cursive;
+    font-size: 40px;
+}
+
+input{
+    color: #333;
+    height: 50px;
+    width: 300px;
+    padding: 0 20px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.connexion{
+    color: #fff;
+    background-color: transparent;
+    border: solid 2px #fff;
+}
+
+.connexion:hover{
+    transition: ease 0.5s;
+    background-color: rgb(15, 15, 15);
+}
+
+a{
+    color: rgb(136, 135, 135);
+}
+
+a:hover{
+    text-decoration: underline;
 }
