@@ -3,23 +3,35 @@
 @import url("accueil.css");
 
 .encadrement{
-    background: #251b17;
+    background: #3f3937;
     width: 60vw;
-    height: 30vw;
+    height: 41vw;
     font-size: 20px;
     color: white;
     margin-top: 5vw;
-    margin-left: 10vw;
+    margin-left: 15vw;
+    position: relative;
+    z-index: 1;
     
 }
 
-.encadrement h1{
+.encadrement h1, h3, h4, ul, p{
     margin-left: 5vw;
 
 }
 
 #image{
-    height: 25vw;
+    position: relative;
+    z-index: 2;
+    height: 30vw;
+    float: right;
+    margin-right: 15vw;
+    margin-top: 7vw;
     
 
+}
+
+.liste{
+    display: flex;
+    flex-direction: row;
 }
