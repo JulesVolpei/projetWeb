@@ -28,7 +28,7 @@ input {
     margin-top: 30px;
   }
 
-.conteneur .form{
+.conteneur form{
     width: 340px;
     transition: margin-left 0.18s ease;
     margin: auto;
@@ -52,7 +52,7 @@ input {
 
 
 
-.conteneur .form .titre{
+.conteneur form .titre{
 
     display: flex;
     flex-direction: row;
@@ -62,7 +62,7 @@ input {
     font-weight: 400;
 }
 
-.form .champ-saisie{
+form .champ-saisie{
     position: relative;
     height: 50px;
     width: 100%;
@@ -99,26 +99,26 @@ input {
     color: #e7e7e7;
 }
 
-.form .texte{
+form .texte{
     color: #333;
     font-size: 14px;
 }
 
-.form a.texte{
+form a.texte{
     color: grey;
     text-decoration: none;
 }
 
-.form a:hover{
+form a:hover{
     text-decoration: underline;
 }
 
-.form .bouton{
+form .bouton{
     margin-top: 35px;
     margin-left: 35px;
 }
 
-.form .bouton input{
+form .bouton input{
     border: none;
     color: white;
     font-size: 20px;
