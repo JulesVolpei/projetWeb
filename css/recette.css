@@ -71,10 +71,12 @@ nav .icon{
     color: #000;
 }
 
+/*-------------------- Section ------------------*/
+
 .encadrement{
+    height: auto;
     background: #3f3937;
     width: 60vw;
-    height: 41vw;
     font-size: 20px;
     color: white;
     margin-top: 5vw;
