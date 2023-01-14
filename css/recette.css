@@ -1,6 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url("accueil.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #e7e7e7;
+}
+
+/*--------------- Header --------------------*/
+
+header{
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+    color: #000;
+    font-family: 'Satisfy', cursive;
+    font-size: 4em;
+}
+
+
+nav{
+    width: auto;
+    height: 70px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+button{
+    background-color: #000;
+    color: #000;
+    width: 100px;
+    font-size: 1.2em;
+}
+
+nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    border: solid 2px #000;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+nav a button{
+    padding: 0 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    width: 150px;
+    font-size: 1.3em;
+    border: none;
+    font-family: 'Abril Fatface', cursive;
+}
+
+nav .icon{
+    display: none;
+    color: #000;
+}
 
 .encadrement{
     background: #3f3937;

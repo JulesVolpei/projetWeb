@@ -13,6 +13,8 @@ body{
     background-color: #e7e7e7;
 }
 
+/*--------------- Header --------------------*/
+
 header{
     margin: 10px 20px;
     display: flex;
@@ -68,6 +70,18 @@ nav a button{
 nav .icon{
     display: none;
     color: #000;
+}
+
+/*----------------- Section ----------------*/
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.recette img{
+    width: 300px;
 }
 
 @media (max-width: 1000px){
