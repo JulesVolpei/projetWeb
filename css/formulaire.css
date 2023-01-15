@@ -63,3 +63,9 @@ a{
 form a:hover{
     text-decoration: underline;
 }
+
+@media (max-width : 1100px){
+    form{
+        margin-top: 70px;
+    }
+}
