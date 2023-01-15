@@ -13,6 +13,11 @@ body{
     background-color: #e7e7e7;
 }
 
+h3{
+    font-size: 1.8em;
+    color: #CAAD00;
+}
+
 /*--------------- Header --------------------*/
 
 header{
@@ -75,11 +80,14 @@ nav .icon{
 /*----------------- Section ----------------*/
 
 section{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-recette{
     height: auto;
-    background: #3f3937;
     font-size: 20px;
     color: white;
-    margin-top: 5vw;
     margin-left: 15vw;
     position: relative;
     z-index: 1;
@@ -88,8 +96,42 @@ section{
     justify-content: space-evenly;
 }
 
-.recette img{
+.recette{
+    font-size: 20px;
+    color: white;
+    margin-left: 15vw;
+    padding: 40px;
+    background: #3f3937;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.recette div h2, ul li{
+    margin-bottom: 20px;
+}
+
+.recettes img{
+    z-index: 1;
     width: 300px;
+    position: relative;
+    top: 100px;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+
+.categories article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 
