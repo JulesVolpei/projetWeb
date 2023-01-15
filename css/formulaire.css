@@ -60,6 +60,6 @@ a{
     color: rgb(136, 135, 135);
 }
 
-a:hover{
+form a:hover{
     text-decoration: underline;
 }
