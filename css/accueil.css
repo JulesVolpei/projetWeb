@@ -140,31 +140,6 @@ section{
     top: 100px;
 }
 
-.categories{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.categories h2{
-    margin-bottom: 40px;
-}
-
-.categories article{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.categories article div{
-    background: transparent;
-    border: solid 2px #000;
-    margin: 20px 40px;
-    padding: 20px 40px;
-}
-
 
 /*------------------ Media --------------------*/
 
