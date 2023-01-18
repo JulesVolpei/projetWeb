@@ -2,9 +2,9 @@
     class Accueil {
 
         public function affichageAccueil() {
-            $test = array();
+            $troisRecettes = array();
             foreach (BaseDeDonnes::donneLesRecettes() as $recette) {
-                array_push($test, $recette);
+                array_push($troisRecettes, $recette);
             }
             echo '<!DOCTYPE html>
                     <html lang="en">
@@ -53,51 +53,51 @@
                                 <div>
                                     <h3>';
                                         // Titre
-                                        echo BaseDeDonnes::troisNomsRecettes($test)[0];
+                                        echo BaseDeDonnes::troisNomsRecettes($troisRecettes)[0];
             echo'                       </h3>
                                     <ul>
                                         <li>';
-            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[0];
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($troisRecettes)[0];
             echo'                           </li>
                                         <li>';
-            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[0];
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($troisRecettes)[0];
             echo'                            </li>
                                         <li>';
-            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[0];
-            echo'                            </li>
-                                    </ul>
-                                    <span class="note"></span>
-                                </div>
-                                <div>
-                                    <h3>';
-                                        echo BaseDeDonnes::troisNomsRecettes($test)[1];
-            echo'                        </h3>
-                                    <ul>
-                                        <li>';
-            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[1];
-            echo'                            </li>
-                                        <li>';
-            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[1];
-            echo'                            </li>
-                                        <li>';
-            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[1];
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($troisRecettes)[0];
             echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
                                 </div>
                                 <div>
                                     <h3>';
-                                        echo BaseDeDonnes::troisNomsRecettes($test)[2];
+                                        echo BaseDeDonnes::troisNomsRecettes($troisRecettes)[1];
             echo'                        </h3>
                                     <ul>
                                         <li>';
-            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[2];
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($troisRecettes)[1];
             echo'                            </li>
                                         <li>';
-            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[2];
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($troisRecettes)[1];
             echo'                            </li>
                                         <li>';
-            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[2];
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($troisRecettes)[1];
+            echo'                            </li>
+                                    </ul>
+                                    <span class="note"></span>
+                                </div>
+                                <div>
+                                    <h3>';
+                                        echo BaseDeDonnes::troisNomsRecettes($troisRecettes)[2];
+            echo'                        </h3>
+                                    <ul>
+                                        <li>';
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($troisRecettes)[2];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($troisRecettes)[2];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($troisRecettes)[2];
             echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
