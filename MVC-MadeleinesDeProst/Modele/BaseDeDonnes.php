@@ -50,15 +50,27 @@
         }
         public static function troisParticularitesRecettes($troisRecettes) {
             // On prend toutes les particularités des recettes
-            $query = 'SELECT RECETTE.ID
+            $query = 'SELECT PARTICULARITE.NOM, RECETTE.ID
                       FROM RECETTE, RECETTE_PARTICULARITE, PARTICULARITE
                       WHERE RECETTE_PARTICULARITE.ID_RECETTE = RECETTE.ID AND RECETTE_PARTICULARITE.ID_PARTICULARITE = PARTICULARITE.ID';
+            // On exécute la requête
             $resultatIDRecettesAvecUneParticularite = mysqli_query(self::connexion(), $query);
             $troisParticularites = array();
+            // On parcourt l'ensemble des particularités
+            foreach ($resultatIDRecettesAvecUneParticularite as $particularite) {
+                // On parcourt nos trois recettes
+                foreach ($troisRecettes as $recette) {
+                    // Si l'id d'une des recettes correspond à la colonne ID dans notre résultat de requête
+                    if ($recette["ID"] == $particularite["ID"]) {
+                        // La recette a une particularité et il faut l'ajouter
+                        array_push($troisParticularites, $particularite["NOM"]);
+                    }
+                }
+            }
+            // Pour les recettes n'ayant pas de particularités
             while (count($troisParticularites) < 3) {
                 array_push($troisParticularites, "Pas de particularité");
             }
-
             return $troisParticularites;
         }
     }
