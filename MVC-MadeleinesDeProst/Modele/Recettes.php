@@ -1,23 +1,39 @@
 <?php
     class Recettes {
+        private static $troisRecettes = array();
 
+
+        public static function donneLesRecettes() {
+            if (self::$troisRecettes == null) {
+                // Connexion base de données
+                // Requête
+                $query = "SELECT * FROM RECETTE ORDER BY RAND() LIMIT 3";
+                $resultat = mysqli_query(BaseDeDonnes::connexion(), $query);
+                // On parcourt le résultat de notre requête
+                while ($row = mysqli_fetch_assoc($resultat)) {
+                    // On ajoute une recette à notre tableau
+                    array_push(self::$troisRecettes, $row);
+                }
+            }
+            return self::$troisRecettes;
+        }
         public static function troisNomsRecettes() {
             $troisNom = array();
-            foreach (BaseDeDonnes::donneLesRecettes() as $nomRecette) {
+            foreach (self::donneLesRecettes() as $nomRecette) {
                 array_push($troisNom, $nomRecette["NOM"]);
             }
             return $troisNom;
         }
         public static function troisDifficultesRecettes() {
             $troisDifficultes = array();
-            foreach (BaseDeDonnes::donneLesRecettes() as $difficulteRecette) {
+            foreach (self::donneLesRecettes() as $difficulteRecette) {
                 array_push($troisDifficultes, $difficulteRecette["DIFFICULTE"]);
             }
             return $troisDifficultes;
         }
         public static function troisCoutsRecettes() {
             $troisCouts = array();
-            foreach (BaseDeDonnes::donneLesRecettes() as $coutRecette) {
+            foreach (self::donneLesRecettes() as $coutRecette) {
                 array_push($troisCouts, $coutRecette["COUT"]);
             }
             return $troisCouts;
@@ -32,7 +48,7 @@
             $troisParticularites = array();
             $ajoute = false;
             // On parcourt nos recettes
-            foreach (BaseDeDonnes::donneLesRecettes() as $recette) {
+            foreach (self::donneLesRecettes() as $recette) {
                 // On parcourt nos particularités
                 foreach ($resultatIDRecettesAvecUneParticularite as $particularite) {
                     // Si la recette a une particularité

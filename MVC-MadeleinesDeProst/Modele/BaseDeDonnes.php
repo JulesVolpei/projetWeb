@@ -14,19 +14,4 @@
             // On renvoit la connexion
             return self::$bdLink;   
         }
-        public static function donneLesRecettes() {
-            if (self::$troisRecettes == null) {
-                // Connexion base de données
-                $bdLien = self::connexion();
-                // Requête
-                $query = "SELECT * FROM RECETTE ORDER BY RAND() LIMIT 3";
-                $resultat = mysqli_query($bdLien, $query);
-                // On parcourt le résultat de notre requête
-                while ($row = mysqli_fetch_assoc($resultat)) {
-                    // On ajoute une recette à notre tableau
-                    array_push(self::$troisRecettes, $row);
-                }
-            }
-            return self::$troisRecettes;
-        }
     }
