@@ -58,7 +58,7 @@
             while (count($troisParticularites) < 3) {
                 array_push($troisParticularites, "Pas de particularité");
             }
+
             return $troisParticularites;
         }
-
     }
