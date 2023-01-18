@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #e7e7e7;
+}
+
+h2{
+    font-size: 2.5em;
+    font-family: 'Abril Fatface', cursive;
+
+}
+
+h3{
+    font-size: 1.8em;
+    color: #CAAD00;
+}
+
+h4{
+    color: #000;
+    font-size: 1.3em;
+    font-family: 'Abril Fatface', cursive;
+}
+
+/*--------------- Header --------------------*/
+
+header{
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+    color: #000;
+    font-family: 'Satisfy', cursive;
+    font-size: 4em;
+}
+
+h1:hover{
+    transition: ease 0.5s;
+    color: #3f3937;
+}
+
+
+nav{
+    width: auto;
+    height: 70px;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+
+button{
+    background-color: #000;
+    color: #000;
+    width: 100px;
+    font-size: 1.2em;
+}
+
+nav a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    border: solid 2px #000;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+nav a button{
+    padding: 0 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: #000;
+    width: 150px;
+    font-size: 1.3em;
+    border: none;
+    font-family: 'Abril Fatface', cursive;
+}
+
+nav .icon{
+    display: none;
+    color: #000;
+}
+
+/*----------------- Section ----------------*/
+
+section{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-recette{
+    height: auto;
+    font-size: 20px;
+    color: white;
+    margin-left: 15vw;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.recette{
+    font-size: 20px;
+    color: white;
+    margin-left: 15vw;
+    padding: 100px;
+    background: #3f3937;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.recette div h3, ul li{
+    margin-bottom: 20px;
+}
+
+.recettes img{
+    z-index: 1;
+    width: 25%;
+    position: relative;
+    top: 100px;
+}
+
+
+/*------------------ Media --------------------*/
+
+
+@media (max-width: 1100px){
+
+    header{
+        justify-content: flex-end;
+    }
+
+    h1{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav a{
+        display: none;
+        border: none;
+    }
+
+    nav .icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 5% !important;
+        top: 20px;
+        padding: 0 !important;
+    }
+
+    nav.responsive a{
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+        margin-left: 20px;
+    }
+
+    nav.responsive #onglet:hover{
+        transition: ease 0.5s;
+        background-color: #fff;
+    }
+
+    nav.responsive button{
+        display: block;
+        padding: 10px 0;
+    }
+
+    nav{
+        flex-direction: column-reverse;
+        min-height: 70px;
+        height: 100%;
+        align-items: flex-start;
+    }
+
+    .categories article div{
+        margin: 20px 20px;
+    }
+}

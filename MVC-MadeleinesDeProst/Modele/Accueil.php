@@ -1,28 +1,9 @@
 <?php
     class Accueil {
-        private static $troisRecettes = array();
-
-        // Fonction pour récupérer les trois recettes aléatoirement
-        public static function donneLesRecettes() {
-            if (self::$troisRecettes == null) {
-                // Connexion base de données
-                $bdLien = BaseDeDonnes::connexion();
-                // Requête
-                $query = "SELECT DISTINCT * FROM RECETTE ORDER BY RAND() LIMIT 3";
-                $resultat = mysqli_query($bdLien, $query);
-                // On parcourt le résultat de notre requête
-                while ($row = mysqli_fetch_assoc($resultat)) {
-                    // On ajoute une recette à notre tableau
-                    array_push(self::$troisRecettes, $row);
-                }
-            }
-        
-            return self::$troisRecettes;
-        }
 
         public function affichageAccueil() {
             $test = array();
-            foreach (self::donneLesRecettes() as $recette) {
+            foreach (BaseDeDonnes::donneLesRecettes() as $recette) {
                 array_push($test, $recette);
             }
             echo '<!DOCTYPE html>
@@ -72,61 +53,52 @@
                                 <div>
                                     <h3>';
                                         // Titre
-                                        echo $test[0]["NOM"];
+                                        echo BaseDeDonnes::troisNomsRecettes($test)[0];
             echo'                       </h3>
                                     <ul>
-                                        <li>
-                                            <!-- Difficulté à modifier avec diffilculté BD -->
-                                            Difficulté :
-                                        </li>
-                                        <li>
-                                            <!-- Coût à modifier avec coût BD -->
-                                            Coût
-                                        </li>
-                                        <li>
-                                            <!-- Particularité à modifier avec particularité BD -->
-                                            Particularité :
-                                        </li>
+                                        <li>';
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[0];
+            echo'                           </li>
+                                        <li>';
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[0];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Particularité : ';
+            echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
                                 </div>
                                 <div>
                                     <h3>';
-                                        echo $test[1]["NOM"];
+                                        echo BaseDeDonnes::troisNomsRecettes($test)[1];
             echo'                        </h3>
                                     <ul>
-                                        <li>
-                                            <!-- Difficulté à modifier avec diffilculté BD -->
-                                            Difficulté : 
-                                        </li>
-                                        <li>
-                                            <!-- Coût à modifier avec coût BD -->
-                                            Coût : 
-                                        </li>
-                                        <li>
-                                            <!-- Particularité à modifier avec particularité BD -->
-                                            Particularité : 
-                                        </li>
+                                        <li>';
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[1];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[1];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Particularité : ';
+            echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
                                 </div>
                                 <div>
                                     <h3>';
-                                        echo $test[1]["NOM"];
+                                        echo BaseDeDonnes::troisNomsRecettes($test)[2];
             echo'                        </h3>
                                     <ul>
-                                        <li>
-                                            <!-- Difficulté à modifier avec diffilculté BD -->
-                                            Difficulté :
-                                        </li>
-                                        <li>
-                                            <!-- Coût à modifier avec coût BD -->
-                                            Coût :
-                                        </li>
-                                        <li>
-                                            <!-- Particularité à modifier avec particularité BD -->
-                                            Particularité :
-                                        </li>
+                                        <li>';
+            echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes($test)[2];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[2];
+            echo'                            </li>
+                                        <li>';
+            echo'                                Particularité : ';
+            echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
                                 </div>
@@ -139,32 +111,4 @@
                     </html>';
         }
 
-        public function affichageRecettes() {
-            $this->donneLesRecettes();
-            $compteur = 1;
-            foreach(self::$troisRecettes as $recette) {
-                echo "Recette numéro " . $compteur;
-                echo "<br>";
-                echo $recette["NOM"];
-                echo "<br>"; 
-                sleep(3);
-                $compteur += 1;
-            }
-        }
-
-        public function afficheEnModeTableau() {
-            echo '<table>';
-            echo '  <tr>';
-            echo '      <th>' . self::$troisRecettes[0]["NOM"] . '</th>';
-            echo '      <th>' . self::$troisRecettes[1]["NOM"] . '</th>';
-            echo '      <th>' . self::$troisRecettes[2]["NOM"] . '</th>';
-            echo '  </tr>';
-            echo '  <tr>';
-            echo '      <td>' . self::$troisRecettes[0]["DIFFICULTE"] . '</td>';
-            echo '      <td>' . self::$troisRecettes[1]["DIFFICULTE"] . '</td>';
-            echo '      <td>' . self::$troisRecettes[2]["DIFFICULTE"] . '</td>';
-            echo'   </tr>';
-            echo '</table>';
-        }
-        
     }
