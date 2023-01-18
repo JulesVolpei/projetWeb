@@ -45,51 +45,51 @@
                                 <article class="recette">
                                     <div>
                                         <h3>';
-    echo                                BaseDeDonnes::troisNomsRecettes(BaseDeDonnes::donneLesRecettes())[0];
+    echo                                Recettes::troisNomsRecettes()[0];
     echo'                       </h3>
                                         <ul>
                                             <li>';
-    echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes(BaseDeDonnes::donneLesRecettes())[0];
+    echo'                                Difficulté : ' . Recettes::troisDifficultesRecettes()[0];
     echo'                           </li>
                                             <li>';
-    echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes(BaseDeDonnes::donneLesRecettes())[0];
+    echo'                                Coût : ' . Recettes::troisCoutsRecettes()[0];
     echo'                            </li>
                                             <li>';
-    echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes(BaseDeDonnes::donneLesRecettes())[0];
-    echo'                            </li>
-                                        </ul>
-                                        <span class="note"></span>
-                                    </div>
-                                    <div>
-                                        <h3>';
-    echo                                BaseDeDonnes::troisNomsRecettes(BaseDeDonnes::donneLesRecettes())[1];
-    echo'                        </h3>
-                                        <ul>
-                                            <li>';
-    echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes(BaseDeDonnes::donneLesRecettes())[1];
-    echo'                            </li>
-                                            <li>';
-    echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes(BaseDeDonnes::donneLesRecettes())[1];
-    echo'                            </li>
-                                            <li>';
-    echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes(BaseDeDonnes::donneLesRecettes())[1];
+    echo'                                Particularité : ' . Recettes::troisParticularitesRecettes()[0];
     echo'                            </li>
                                         </ul>
                                         <span class="note"></span>
                                     </div>
                                     <div>
                                         <h3>';
-    echo                                BaseDeDonnes::troisNomsRecettes(BaseDeDonnes::donneLesRecettes())[2];
+    echo                                Recettes::troisNomsRecettes()[1];
     echo'                        </h3>
                                         <ul>
                                             <li>';
-    echo'                                Difficulté : ' . BaseDeDonnes::troisDifficultesRecettes(BaseDeDonnes::donneLesRecettes())[2];
+    echo'                                Difficulté : ' . Recettes::troisDifficultesRecettes()[1];
     echo'                            </li>
                                             <li>';
-    echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes(BaseDeDonnes::donneLesRecettes())[2];
+    echo'                                Coût : ' . Recettes::troisCoutsRecettes()[1];
     echo'                            </li>
                                             <li>';
-    echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes(BaseDeDonnes::donneLesRecettes())[2];
+    echo'                                Particularité : ' . Recettes::troisParticularitesRecettes()[1];
+    echo'                            </li>
+                                        </ul>
+                                        <span class="note"></span>
+                                    </div>
+                                    <div>
+                                        <h3>';
+    echo                                Recettes::troisNomsRecettes()[2];
+    echo'                        </h3>
+                                        <ul>
+                                            <li>';
+    echo'                                Difficulté : ' . Recettes::troisDifficultesRecettes()[2];
+    echo'                            </li>
+                                            <li>';
+    echo'                                Coût : ' . Recettes::troisCoutsRecettes()[2];
+    echo'                            </li>
+                                            <li>';
+    echo'                                Particularité : ' . Recettes::troisParticularitesRecettes()[2];
     echo'                            </li>
                                         </ul>
                                         <span class="note"></span>
