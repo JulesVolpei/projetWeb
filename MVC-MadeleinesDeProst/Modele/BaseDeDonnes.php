@@ -1,6 +1,7 @@
 <?php
     final class BaseDeDonnes {
         private static $bdLink;
+        private static $troisRecettes = array();
 
         // Singleton
         public static function connexion() {
@@ -14,8 +15,7 @@
             return self::$bdLink;   
         }
         public static function donneLesRecettes() {
-            $troisRecettes = array();
-            if ($troisRecettes == null) {
+            if (self::$troisRecettes == null) {
                 // Connexion base de données
                 $bdLien = self::connexion();
                 // Requête
@@ -24,10 +24,10 @@
                 // On parcourt le résultat de notre requête
                 while ($row = mysqli_fetch_assoc($resultat)) {
                     // On ajoute une recette à notre tableau
-                    array_push($troisRecettes, $row);
+                    array_push(self::$troisRecettes, $row);
                 }
             }
-            return $troisRecettes;
+            return self::$troisRecettes;
         }
         public static function troisNomsRecettes($troisRecettes) {
             $troisNom = array();

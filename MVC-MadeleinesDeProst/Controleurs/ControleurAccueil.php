@@ -2,9 +2,12 @@
 
     final class ControleurAccueil {
         public function defautAction() {
-            $test = new Accueil();
             // A_Vue[$var] c'est le contenu de ça quoi
-            Vue::montrer("accueil/voir", array("accueil" => $test->affichageAccueil()));
+            Vue::montrer("accueil/pageaccueil");
+        }
+
+        public function redirectionAction() {
+            // faire le truc de redirection
         }
 
         public function testFormAction(Array $A_parametres = null, Array $A_postParams = null) {
