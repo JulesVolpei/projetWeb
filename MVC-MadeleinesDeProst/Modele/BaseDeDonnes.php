@@ -54,9 +54,7 @@
                       FROM RECETTE, RECETTE_PARTICULARITE, PARTICULARITE
                       WHERE RECETTE_PARTICULARITE.ID_RECETTE = RECETTE.ID AND RECETTE_PARTICULARITE.ID_PARTICULARITE = PARTICULARITE.ID';
             $resultatIDRecettesAvecUneParticularite = mysqli_query(self::connexion(), $query);
-
             $troisParticularites = array();
-
             while (count($troisParticularites) < 3) {
                 array_push($troisParticularites, "Pas de particularité");
             }

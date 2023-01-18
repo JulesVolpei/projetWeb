@@ -6,6 +6,5 @@
     </head>
     <body>
         <?php echo $A_vue['body']; ?>
-        
     </body>
 </html>
