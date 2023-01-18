@@ -1,5 +1,5 @@
 <?php
-    class BaseDeDonnes {
+    final class BaseDeDonnes {
         private static $bdLink;
 
         // Singleton
