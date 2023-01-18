@@ -58,20 +58,29 @@
             // On exécute la requête
             $resultatIDRecettesAvecUneParticularite = mysqli_query(self::connexion(), $query);
             $troisParticularites = array();
-            // On parcourt l'ensemble des particularités
-            foreach ($resultatIDRecettesAvecUneParticularite as $particularite) {
-                // On parcourt nos trois recettes
-                foreach ($troisRecettes as $recette) {
-                    // Si l'id d'une des recettes correspond à la colonne ID dans notre résultat de requête
+            $ajoute = false;
+            // On parcourt nos recettes
+            foreach ($troisRecettes as $recette) {
+                // On parcourt nos particularités
+                foreach ($resultatIDRecettesAvecUneParticularite as $particularite) {
+                    // Si la recette a une particularité
                     if ($recette["ID"] == $particularite["ID"]) {
-                        // La recette a une particularité et il faut l'ajouter
+                        // On ajoute la particularité ) notre liste
                         array_push($troisParticularites, $particularite["NOM"]);
+                        // On modifie notre boolean pour savoir que l'on a ajouté une particularité
+                        $ajoute = true;
+                        // On casse la boucle
+                        break;
                     }
                 }
-            }
-            // Pour les recettes n'ayant pas de particularités
-            while (count($troisParticularites) < 3) {
-                array_push($troisParticularites, "Pas de particularité");
+                // Si aucune particularité n'a été trouvé pour cette recette
+                if (!$ajoute) {
+                    // On ajoute un élément
+                    array_push($troisParticularites, "Pas de particularité");
+                } else { // Sinon
+                    // On remet notre boolean à faux
+                    $ajoute = false;
+                }
             }
             return $troisParticularites;
         }

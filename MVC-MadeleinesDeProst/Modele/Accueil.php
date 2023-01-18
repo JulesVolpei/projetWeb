@@ -52,7 +52,6 @@
                             <article class="recette">
                                 <div>
                                     <h3>';
-                                        // Titre
                                         echo BaseDeDonnes::troisNomsRecettes($troisRecettes)[0];
             echo'                       </h3>
                                     <ul>
