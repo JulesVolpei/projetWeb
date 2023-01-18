@@ -63,7 +63,7 @@
             echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[0];
             echo'                            </li>
                                         <li>';
-            echo'                                Particularité : ';
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[0];
             echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
@@ -80,7 +80,7 @@
             echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[1];
             echo'                            </li>
                                         <li>';
-            echo'                                Particularité : ';
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[1];
             echo'                            </li>
                                     </ul>
                                     <span class="note"></span>
@@ -97,7 +97,7 @@
             echo'                                Coût : ' . BaseDeDonnes::troisCoutsRecettes($test)[2];
             echo'                            </li>
                                         <li>';
-            echo'                                Particularité : ';
+            echo'                                Particularité : ' . BaseDeDonnes::troisParticularitesRecettes($test)[2];
             echo'                            </li>
                                     </ul>
                                     <span class="note"></span>

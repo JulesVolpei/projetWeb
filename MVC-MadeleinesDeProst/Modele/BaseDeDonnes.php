@@ -49,11 +49,16 @@
             return $troisCouts;
         }
         public static function troisParticularitesRecettes($troisRecettes) {
-            $bdLien = self::connexion();
-            $query = "SELECT ";
+            // On prend toutes les particularités des recettes
+            $query = 'SELECT RECETTE.ID
+                      FROM RECETTE, RECETTE_PARTICULARITE, PARTICULARITE
+                      WHERE RECETTE_PARTICULARITE.ID_RECETTE = RECETTE.ID AND RECETTE_PARTICULARITE.ID_PARTICULARITE = PARTICULARITE.ID';
+            $resultatIDRecettesAvecUneParticularite = mysqli_query(self::connexion(), $query);
+
             $troisParticularites = array();
-            foreach ($troisRecettes as $particulariteRecette) {
-                array_push($troisParticularites, $particulariteRecette["PARTICULARITE"]);
+
+            while (count($troisParticularites) < 3) {
+                array_push($troisParticularites, "Pas de particularité");
             }
             return $troisParticularites;
         }
