@@ -94,6 +94,12 @@ nav .icon{
     color: #000;
 }
 
+#barreRecherche{
+    display:flex;
+    flex-direction: column;
+}
+
+
 /*----------------- Section ----------------*/
 
 section{
