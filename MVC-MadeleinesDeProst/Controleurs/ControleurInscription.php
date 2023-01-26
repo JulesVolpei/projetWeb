@@ -21,9 +21,13 @@ final class ControleurInscription
 
             $newmdp = $this->verificationMotDePasse($mdp, $mdpConfirm);
 
-            if ($newmdp != "ErreurMDP") {
+            if ($newmdp != "ErreurMDP" && $nom != ModeleInscription::verifyName($nom)) {
                 ModeleInscription::inscription($nom, $email, $newmdp, $cheminFichier);
-            }
+            } elseif ($newmdp == "ErreurMDP"){
+                echo "<script> alert('Votre mot de passe n\'est pas valide'); </script>";
+            } else 
+                echo "<script> alert('Le nom que vous avez choisi est déjà pris'); </script>";
+
             Vue::montrer("inscription/inscription"); //amelioration possible : lancer ControleurConnexion
         } 
         else {
