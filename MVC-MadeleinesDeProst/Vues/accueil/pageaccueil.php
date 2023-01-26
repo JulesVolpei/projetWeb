@@ -5,6 +5,14 @@
                                 <a href="index.html">
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
+                                <div id="barreRecherche">
+                                    <form method="post">
+                                        <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
+                                    </form>
+                                ';
+                                Recherche::rechercheRecette();
+                                echo '
+                                </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
                                         <button>
@@ -23,4 +31,11 @@
                         
                             </header>
                             
-                            <section class="recettes">';
+                            <section class="recettes">
+                        
+                                
+                               
+                        
+                            <script src="js/js.js"></script>
+                        </body>
+                   </html>';
