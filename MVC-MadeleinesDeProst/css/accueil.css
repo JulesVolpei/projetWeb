@@ -93,21 +93,27 @@ nav .icon{
     display: none;
     color: #000;
 }
-
 #barreRecherche{
     display:flex;
     flex-direction: column;
+    border: solid 2px #000;
+    height:min-content;
 }
 
 #champRecherche{
     font-size: 1.3em;
-    border: solid 2px #000;
+    border:0px;
+    border-bottom: solid 2px #000;
     background-color: white;
     background-image: url('https://cdn-icons-png.flaticon.com/512/8443/8443859.png');
     background-position: 1px 1px;
-    background-repeat: no-repeat;
-    background-size: contain;
     padding-left: 30px;
+}
+
+.recettePossible{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
 }
 
 /*----------------- Section ----------------*/

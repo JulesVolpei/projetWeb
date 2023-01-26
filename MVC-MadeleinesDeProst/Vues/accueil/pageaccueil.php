@@ -2,16 +2,21 @@
     echo
             '<body>
                       <header>
-                                <a href="index.html">
+                                <a href="Accueil">
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
                                 <div id="barreRecherche">
                                     <form method="post">
                                         <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
                                     </form>
-                                ';
-                                $A_vue['barreDeRecherche'];
+                                    <form method="post" action="Recettes">
+                                    ';
+                                    foreach($A_vue['barreDeRecherche'] as $row){
+                                        $row[0] = strtoupper($row[0]);
+                                        echo "<input type=\"button\" class=\"recettePossible\" value=\"".$row."\"><br> ";
+                                    }
                                 echo '
+                                    </form>
                                 </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
