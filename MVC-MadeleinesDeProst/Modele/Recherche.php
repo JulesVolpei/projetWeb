@@ -1,10 +1,8 @@
 <?php
 class Recherche
 {
-    public static function rechercheRecette(){
-        require 'BaseDeDonnes.php';
-        $pdo = BaseDeDonnes::connexion();
-        $listeNomRecette = $pdo->query("SELECT NOM FROM RECETTE");
+    public function rechercheRecette(){
+        $listeNomRecette = BaseDeDonnes::connexion()->query("SELECT NOM FROM RECETTE");
         $texteRecherche = $_POST['recherche'];
         $resultat = [];
         foreach($listeNomRecette as $row) {
@@ -24,5 +22,4 @@ class Recherche
             echo "<p class='recettePossible'> ".$row." </p><br>";
         }   
     }
-}          
-?> 
+}

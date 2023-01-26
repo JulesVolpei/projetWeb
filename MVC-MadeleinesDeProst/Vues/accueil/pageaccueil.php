@@ -10,7 +10,7 @@
                                         <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
                                     </form>
                                 ';
-                                Recherche::rechercheRecette();
+                                $A_vue['barreDeRecherche'];
                                 echo '
                                 </div>
                                 <nav id="navbar" class="nav">
@@ -31,11 +31,4 @@
                         
                             </header>
                             
-                            <section class="recettes">
-                        
-                                
-                               
-                        
-                            <script src="js/js.js"></script>
-                        </body>
-                   </html>';
+                            <section class="recettes">';
