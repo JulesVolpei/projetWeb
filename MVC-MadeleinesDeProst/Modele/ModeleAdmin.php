@@ -87,4 +87,25 @@ class ModeleAdmin
         $query = "Update APPRECIATION SET ACTIVEE = 0 Where ID = \"" . $id . "\";";
         mysqli_query(BaseDeDonnes::connexion(), $query);
     }
+
+    public static function supprimerRecette($id)
+    {
+        $query = mysqli_prepare(BaseDeDonnes::connexion(), "DELETE FROM `RECETTE` WHERE `RECETTE`.`ID` = (?);");
+        mysqli_stmt_bind_param($query, "s", $id);
+        mysqli_execute($query);
+        mysqli_stmt_close($query);
+    }
+
+    public static function ajouterRecette($nomRecette, $etapes, $temps, $difficulte, $cout, $ingredients, $ustensile, $particularite)
+    {
+        //Ajouter un ID a la recette qui soit le dernier id de la base de données + 1
+        $queryId = mysqli_query(BaseDeDonnes::connexion(), "SELECT max(ID) FROM RECETTE;");
+        $idRecette = mysqli_fetch_assoc($queryId);
+        $idRecette = $idRecette["max(ID)"] + 1;
+
+        //Insérer les données de la table RECETTE
+        $inserer = "INSERT INTO RECETTE (ID, NOM, ETAPES, TEMPS, INGREDIENTS, DIFFICULTE, PARTICULARITE, USTENSILE, COUT)
+            VALUES ('$idRecette', '$nomRecette', '$etapes', '$temps', '$ingredients', '$difficulte', '$particularite', '$ustensile', '$cout')";
+        mysqli_query(BaseDeDonnes::connexion(), $inserer);
+    }
 }

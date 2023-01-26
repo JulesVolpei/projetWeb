@@ -146,7 +146,7 @@ input {
 
 #formModifier {
     margin-top: 20px;
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 

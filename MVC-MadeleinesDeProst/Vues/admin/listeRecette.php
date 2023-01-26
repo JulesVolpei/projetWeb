@@ -4,7 +4,7 @@ foreach ($A_vue['recette'] as $row) {
     echo '<li>' . $row["ID"] . ' ' . $row["NOM"] .
         '<form action="Admin" method="post">' .
         '<a class="icon-recette">' .
-        '<input type="submit" name="supprimer" value="&#x2715">' .
+        '<input type="submit" name="supprimerRecette" value="&#x2715">' .
         '<input type="hidden" name="id" value="' . $row['ID'] . '">' .
         '</a>' .
         '</form>' .
@@ -51,7 +51,7 @@ echo '</ul>
     <div>
         <h3> Particularite </h3><input type="text" name="particularite">
     </div>
-    <input id="validerAjout" type="submit" name="modifier" value="Modifier">
+    <input id="validerAjout" type="submit" name="modifierRecette" value="Modifier">
 </form>
 
 
@@ -80,7 +80,7 @@ echo '</ul>
 <div>
     <h3> Particularite </h3><input type="text" name="particularite">
 </div>
-<input id="validerAjout" type="submit" name="ajouter" value="Insérer">" .
+<input id="validerAjout" type="submit" name="ajouterRecette" value="Insérer">" .
 </form>
 </article>
 </section>

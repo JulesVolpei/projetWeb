@@ -34,6 +34,21 @@ final class ControleurAdmin
             }
 
         }
+        if (isset($_POST["supprimerRecette"])) {
+            $id = $_POST['id'];
+            ModeleAdmin::supprimerRecette($id);
+        }
+        if (isset($_POST["ajouterRecette"])) {
+            $nomRecette = $_POST['nomRecette'];
+            $etapes = $_POST['etapes'];
+            $temps = $_POST['temps'];
+            $difficulte = $_POST['difficulte'];
+            $cout = $_POST['cout'];
+            $ingredients = $_POST['ingredients'];
+            $ustensile = $_POST['ustensile'];
+            $particularite = $_POST['particularite'];
+            ModeleAdmin::ajouterRecette($nomRecette, $etapes, $temps, $difficulte, $cout, $ingredients, $ustensile, $particularite);
+        }
 
         $arrayUtilisateur = ModeleAdmin::donneLesUtilisateurs();
         $arrayAppreciation = ModeleAdmin::donneLesAppreciations();
