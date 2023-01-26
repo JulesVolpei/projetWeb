@@ -8,9 +8,12 @@
                 $nom = $_POST['nom'];
                 ModeleAdmin::supprimerUtilisateur($nom);
             }
+
+            $arrayUtilisateur = ModeleAdmin::donneLesUtilisateurs();
+
             Vue::montrer("admin/entete");
             Vue::montrer("admin/admin.php");
-            Vue::montrer("accueil/listeUtilisateur");
-            Vue::montrer("accueil/recettesAleatoires");
+            Vue::montrer("accueil/listeUtilisateur", array("utilisateur" => $arrayUtilisateur));
+            //Vue::montrer("accueil/recettesAleatoires");
         }
     }
