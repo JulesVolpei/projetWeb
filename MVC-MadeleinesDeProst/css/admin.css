@@ -128,8 +128,75 @@ input:hover {
     cursor: pointer;
 }
 
-#activee{
+li .icon-recette {
+    margin-left: 10px;
+}
+
+input {
+    border: none;
+    width: 40px;
+    height: 30px;
+
+}
+
+#activee {
     display: flex;
+}
+
+#formModifier {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#formModifier div {
+    display: flex;
+    flex-direction: row;
+}
+
+#formModifier div h3 {
+    color: #000;
+    font-size: 1.3em;
+}
+
+#formModifier input {
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 300px;
+    padding: 0 10px;
+}
+
+#formInserer {
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+#formInserer div {
+    display: flex;
+    flex-direction: row;
+}
+
+#formInserer div h3 {
+    color: #000;
+    font-size: 1.3em;
+}
+
+#formInserer input {
+    height: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 300px;
+    padding: 0 10px;
+}
+
+#validerAjout {
+    background-color: #3f3937;
+    color: #fff;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 1.3em;
+    height: 50px !important;
 }
 
 /*--------------------- Media -------------------*/
