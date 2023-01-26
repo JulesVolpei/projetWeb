@@ -25,5 +25,4 @@ class Recherche
                         echo "<p class='recettePossible'> ".$row." </p><br>";
                     }   
     }
-}          
-?> 
+}

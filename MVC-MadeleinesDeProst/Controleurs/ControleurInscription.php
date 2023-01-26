@@ -5,7 +5,6 @@ final class ControleurInscription
 
     public function defautAction()
     {
-        Vue::montrer("inscription/inscription");
         if(isset($_POST["validerInscription"])){
 
             $nom = $_POST['nom'];

@@ -13,7 +13,7 @@ echo '
     echo'                                Coût : ' . $A_vue['recettes'][0]["COUT"];
     echo'                            </li>
                                             <li>';
-    echo'                                Particularité : ' . $A_vue['recettes'][0]["PARTICULARITE"];
+    echo'                                Particularité : ' ; if ($A_vue['recettes'][0]["PARTICULARITE"] == null) echo 'Aucune'; else echo $A_vue['recettes'][0]["PARTICULARITE"];
     echo'                            </li>
                                         </ul>
                                         <span class="note"></span>
@@ -30,7 +30,7 @@ echo '
     echo'                                Coût : ' . $A_vue['recettes'][1]["COUT"];
     echo'                            </li>
                                             <li>';
-    echo'                                Particularité : ' . $A_vue['recettes'][1]["PARTICULARITE"];
+    echo'                                Particularité : '; if ($A_vue['recettes'][1]["PARTICULARITE"] == null) echo 'Aucune'; else echo $A_vue['recettes'][1]["PARTICULARITE"];
     echo'                            </li>
                                         </ul>
                                         <span class="note"></span>
@@ -47,7 +47,7 @@ echo '
     echo'                                Coût : ' . $A_vue['recettes'][2]["COUT"];
     echo'                            </li>
                                             <li>';
-    echo'                                Particularité : ' . $A_vue['recettes'][2]["PARTICULARITE"];
+    echo'                                Particularité : '; if ($A_vue['recettes'][2]["PARTICULARITE"] == null) echo 'Aucune'; else echo $A_vue['recettes'][2]["PARTICULARITE"];
     echo'                            </li>
                                         </ul>
                                         <span class="note"></span>
