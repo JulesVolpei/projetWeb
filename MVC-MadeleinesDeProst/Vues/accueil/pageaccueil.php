@@ -2,7 +2,7 @@
     echo
             '<body>
                       <header>
-                                <a href="Acceuil">
+                                <a href="Accueil">
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
                                 <div id="barreRecherche">
