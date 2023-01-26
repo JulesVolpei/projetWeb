@@ -18,9 +18,6 @@ class Recherche
                 array_push($resultat,$nomRecettePossible);
             }
         }
-        foreach($resultat as $row){
-            $row[0] = strtoupper($row[0]);
-            echo "<p class='recettePossible'> ".$row." </p><br>";
-        }   
+        return $resultat;
     }
 }
