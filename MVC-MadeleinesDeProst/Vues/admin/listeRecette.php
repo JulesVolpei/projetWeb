@@ -1,4 +1,5 @@
 <?php
+echo '<h2> Recettes </h2>';
 foreach ($A_vue['recette'] as $row) {
     echo '<li>' . $row["ID"] . ' ' . $row["NOM"] .
         '<form action="Admin" method="post">' .
@@ -21,7 +22,7 @@ echo '<a class="icon-recette">' .
 
 echo '</ul>
 </article>
-<article>
+<article class="recette">
 <form id="formModifier" action="Admin" method="post">
     <div>
         <h3> Identifiant </h3><input type="text" name="idRecette">

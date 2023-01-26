@@ -1,8 +1,10 @@
 <?php
 echo '<article>' .
-    '<ul>';
+    '<ul>
+    <h2> Appréciations </h2>';
+;
 foreach ($A_vue['appreciation'] as $row) {
-    echo '<li>' . $row["NOM_AUTEUR"] . $row["COMMENTAIRE"] .
+    echo '<li>' . $row["NOM_AUTEUR"] . ' ' . $row["COMMENTAIRE"] .
         '<form action="Admin" method="post">' .
         '<a class="icon-recette">' .
         '<input type="submit" name="supprimerAppreciation" value="&#x2715">' .
@@ -22,5 +24,5 @@ echo '</ul>' .
 
     </section>
     </section>
-        <article>
+        <article class="recette">
         <ul>';

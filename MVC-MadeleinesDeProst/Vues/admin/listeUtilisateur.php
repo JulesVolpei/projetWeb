@@ -1,5 +1,6 @@
 <?php
-foreach ($A_vue['utilisateur'] as $row ) {
+echo '<h2> Utilisateurs </h2>';
+foreach ($A_vue['utilisateur'] as $row) {
     echo '<li>' . $row["NOM"] .
         '<form action="Admin" method="post">' .
         '<a class="icon-recette">' .
@@ -13,8 +14,8 @@ foreach ($A_vue['utilisateur'] as $row ) {
         '<input type="text" name="utilisateurEstActivee" value="' . $row["ACTIVEE"] . '">' .
         '</form>' .
         '</li>';
-        
+
 }
 
 echo '</ul>' .
-'</article>';
+    '</article>';
