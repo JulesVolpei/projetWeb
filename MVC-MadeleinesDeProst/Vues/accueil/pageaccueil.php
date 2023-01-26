@@ -13,17 +13,17 @@
                                     ';
                                     foreach($A_vue['barreDeRecherche'] as $row){
                                         $row[0] = strtoupper($row[0]);
-                                        echo "<input type=\"button\" class=\"recettePossible\" value=\"".$row."\"><br> ";
+                                        echo "<input type=\"submit\" class=\"recettePossible\" value=\"".$row."\" name=\"".$row."\"><br> ";
                                     }
                                 echo '
                                     </form>
                                 </div>
                                 <nav id="navbar" class="nav">
-                                    <a id="onglet"> <!-- A changer !!! -->
-                                        <button>
-                                            Recettes
-                                        </button>
-                                    </a>
+                                    <form action="Recettes" method="post">
+                                            <button type="submit">
+                                                Recettes
+                                            </button>
+                                        </form>  
                                     <a id="onglet"> <!-- A changer !!! -->
                                         <form action="Inscription" method="post">
                                             <button type="submit">
