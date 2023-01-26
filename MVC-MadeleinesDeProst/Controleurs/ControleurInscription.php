@@ -5,6 +5,7 @@ final class ControleurInscription
 
     public function defautAction()
     {
+        Vue::montrer("inscription/inscription");
         if(isset($_POST["validerInscription"])){
 
             $nom = $_POST['nom'];
@@ -19,10 +20,11 @@ final class ControleurInscription
 
             $cheminFichier = $this->traitementImage($nomFichier, $typeImage, $nomTmpImage);
 
-            $this->verificationMotDePasse($mdp, $mdpConfirm);
+            $newmdp = $this->verificationMotDePasse($mdp, $mdpConfirm);
 
-            ModeleInscription::inscription($nom, $email, $mdp, $cheminFichier);
-
+            if ($newmdp != "ErreurMDP") {
+                ModeleInscription::inscription($nom, $email, $newmdp, $cheminFichier);
+            }
             Vue::montrer("inscription/inscription"); //amelioration possible : lancer ControleurConnexion
         } 
         else {
@@ -72,10 +74,11 @@ final class ControleurInscription
         
         if (strlen($mdp) > 8 && $maj && $chiffre && $carac_spécial && ($mdp === $mdpConfirm)) {
             $hash = password_hash($mdp, PASSWORD_BCRYPT);
-            
+            return $hash;
             //modele inscription
         }
 
+        return "ErreurMDP";
         //relancer le formulaire si la validation n'est pas passer
     }
     
