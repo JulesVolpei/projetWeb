@@ -9,17 +9,21 @@
                                     <form method="post">
                                         <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
                                     </form>
+                                    <form method="post" action="Recettes">
                                 ';
-                                $A_vue['barreDeRecherche'];
+                                
+                                foreach($A_vue['barreDeRecherche'] as $row){
+                                    $row[0] = strtoupper($row[0]);
+                                    echo "<input type=\"button\" class=\"recettePossible\" value=\"".$row."\"><br> ";
+                                }
                                 echo '
+                                <form method="post">
                                 </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
-                                         <form action="Recettes" method="post">
-                                            <button type="submit">
-                                                Recettes
-                                            </button>
-                                        </form>
+                                        <button>
+                                            Recettes
+                                        </button>
                                     </a>
                                     <a id="onglet"> <!-- A changer !!! -->
                                         <form action="Inscription" method="post">
