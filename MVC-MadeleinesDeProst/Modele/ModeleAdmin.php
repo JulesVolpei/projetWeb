@@ -108,4 +108,13 @@ class ModeleAdmin
             VALUES ('$idRecette', '$nomRecette', '$etapes', '$temps', '$ingredients', '$difficulte', '$particularite', '$ustensile', '$cout')";
         mysqli_query(BaseDeDonnes::connexion(), $inserer);
     }
+
+    public static function modifierRecette($idRecette, $nomRecette, $etapes, $temps, $difficulte, $cout, $ingredients, $ustensile, $particularite)
+    {
+        $modification = "UPDATE `RECETTE` SET `NOM` = '" . $nomRecette . "' , `ETAPES` = '" . $etapes . "' , `TEMPS` = '" . $temps .
+            "', `INGREDIENTS` = '" . $ingredients . "' , `DIFFICULTE` = '" . $difficulte . "' , `PARTICULARITE` = '" . $particularite .
+            "' , `USTENSILE` = '" . $ustensile . "' , `COUT` = '" . $cout .
+            "' WHERE `RECETTE`.`ID` = " . $idRecette . ";";
+        mysqli_query(BaseDeDonnes::connexion(), $modification);
+    }
 }
