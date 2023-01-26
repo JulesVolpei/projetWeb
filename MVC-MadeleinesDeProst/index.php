@@ -22,7 +22,7 @@
     $A_postParams = isset($_POST) ? $_POST : null;
     
     if (!$S_urlADecortiquer == null) {
-        echo $S_urlADecortiquer;
+//        echo $S_urlADecortiquer;
     }
 
     Vue::ouvrirTampon(); // on ouvre le tampon d'affichage, les contrôleurs qui appellent des vues les mettront dedans

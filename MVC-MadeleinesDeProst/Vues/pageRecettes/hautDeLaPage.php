@@ -1,8 +1,8 @@
 <?php
-    echo
-            '<body>
+echo
+'<body>
                       <header>
-                                <a href="Accueil">
+                                <a>
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
                                 <div id="barreRecherche">
@@ -11,11 +11,11 @@
                                     </form>
                                 ';
                                 $A_vue['barreDeRecherche'];
-                                echo '
+echo '
                                 </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
-                                         <form action="Recettes" method="post">
+                                        <form action="Recettes" method="post">
                                             <button type="submit">
                                                 Recettes
                                             </button>
@@ -31,6 +31,4 @@
                                     <a class="icon">&#9776;</a>
                                 </nav>
                         
-                            </header>
-                            
-                            <section class="recettes">';
+                            </header>';
