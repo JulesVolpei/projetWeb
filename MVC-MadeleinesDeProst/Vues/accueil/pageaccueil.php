@@ -10,7 +10,10 @@
                                         <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
                                     </form>
                                 ';
-                                $A_vue['barreDeRecherche'];
+                                foreach($A_vue['barreDeRecherche'] as $row){
+                                    $row[0] = strtoupper($row[0]);
+                                    echo "<input type=\"submit\" class=\"recettePossible\" value=\"".$row."\" name=\"".$row."\"> ";
+                                }
                                 echo '
                                 </div>
                                 <nav id="navbar" class="nav">
