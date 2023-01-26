@@ -34,7 +34,7 @@
     
         </header>
         <section>
-            <form action="Controleurs/ControleurInscription.php" method="post" enctype="multipart/form-data">
+            <form action="Inscription" method="post" enctype="multipart/form-data">
                 <span class="titre"> Inscription </span>
                 <input type="text" name="nom" placeholder="Entrez votre nom">
                 <input type="file" name="imgAjout" id="imgAjout" placeholder="Choissisez votre photo de profil">
@@ -42,10 +42,10 @@
                 <input type="text" name="mdp" placeholder="Entrez votre mot de passe">
                 <input type="text" name="mdpconfirm" placeholder="Confirmez votre mot de passe">
                 <input type="submit" name="validerInscription" class="connexion" value="S\'inscrire">
-                <span class="text">Pas de compte ?
-                    <a href="Controleurs/ControleurConnexion.php" class="texte inscription-lien">Connectez-vous</a>
+                <span class="text">Déja un compte ?
+                    <a href="Inscription" class="texte inscription-lien">Connectez-vous</a>
                 </span>
-                <!--<a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>-->
+                <a href="MotDePasseOublie" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>';
                 //ModeleInscription::inscription($nom);
             echo '
