@@ -1,6 +1,6 @@
 <?php
 
-    final class ControleurDefaut {
+    final class ControleurAccueil {
         public function defautAction() {
             // A_Vue[$var] c'est le contenu de ça quoi
             Vue::montrer("accueil/entete");

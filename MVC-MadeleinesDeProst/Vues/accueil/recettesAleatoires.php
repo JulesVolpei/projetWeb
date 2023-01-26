@@ -54,4 +54,7 @@ echo '
                                     </div>
                                 </article>
                                 
-                            </section>';
+                            </section>
+                            <script src="js/js.js"></script>
+                        </body>
+                   </html>';

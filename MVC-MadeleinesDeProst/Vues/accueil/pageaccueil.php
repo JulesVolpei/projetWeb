@@ -23,11 +23,4 @@
                         
                             </header>
                             
-                            <section class="recettes">
-                        
-                                
-                               
-                        
-                            <script src="js/js.js"></script>
-                        </body>
-                   </html>';
+                            <section class="recettes">';
