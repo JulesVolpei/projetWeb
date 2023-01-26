@@ -6,3 +6,20 @@ function myFunction() {
         x.className = "nav";
     }
 }
+
+function afficherInserer() {
+    if (document.getElementById("formInserer").style.display == "flex") {
+        document.getElementById("formInserer").style.display = "none";
+    } else {
+        document.getElementById("formInserer").style.display = "flex";
+    }
+
+}
+
+function afficherModifier() {
+    if (document.getElementById("formModifier").style.display == "flex") {
+        document.getElementById("formModifier").style.display = "none";
+    } else {
+        document.getElementById("formModifier").style.display = "flex";
+    }
+}

@@ -15,16 +15,16 @@
     
         <header>
     
-            <a href="Accueil">
+            <a href="index.html">
                 <h1>Les Madeleines de Prost</h1>
             </a>
             <nav id="navbar" class="nav">
-                <a id="onglet" href="Recettes"> <!-- A changer !!! -->
+                <a id="onglet" href="recette.html"> <!-- A changer !!! -->
                     <button>
                         Recettes
                     </button>
                 </a>
-                <a id="onglet" href="Connexion"> <!-- A changer !!! -->
+                <a id="onglet" href="connexion.php"> <!-- A changer !!! -->
                     <button>
                         Connexion <br> Inscription
                     </button>
@@ -43,8 +43,9 @@
                 <input type="password" name="mdpconfirm" placeholder="Confirmez votre mot de passe">
                 <input type="submit" name="validerInscription" class="connexion" value="S\'inscrire">
                 <span class="text">Déja un compte ?
-                    <a href="Connexion" class="texte inscription-lien">Connectez-vous</a>
+                    <a href="Inscription" class="texte inscription-lien">Connectez-vous</a>
                 </span>
+                <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>';
                 //ModeleInscription::inscription($nom);
             echo '
