@@ -15,16 +15,16 @@
         
         <header>
     
-            <a href="index.html">
+            <a href="Accueil">
                 <h1>Les Madeleines de Prost</h1>
             </a>
             <nav id="navbar" class="nav">
-                <a id="onglet" href="recette.html"> <!-- A changer !!! -->
+                <a id="onglet" href="Recettes"> <!-- A changer !!! -->
                     <button>
                         Recettes
                     </button>
                 </a>
-                <a id="onglet" href="connexion.html"> <!-- A changer !!! -->
+                <a id="onglet" href="Inscription"> <!-- A changer !!! -->
                     <button>
                         Connexion <br> Inscription
                     </button>
@@ -34,15 +34,15 @@
     
         </header>
         <section>
-            <form action="connexion.php" method="post">
+            <form action="Connexion" method="post">
                 <span class="titre"> Connexion </span>
                 <input type="text" name="nom" placeholder="Entrez votre nom">
                 <input type="text" name="mdp" placeholder="Entrez votre mot de passe">
                 <input type="submit" name="connexion" class="connexion" value="Se connecter">
-                <span class="text">Pas de compte ?
-                    <a href="inscription.php" class="texte inscription-lien">Inscrivez-vous</a>
+                <span class="text">Pas de compte ? 
+                    <a href="Inscription" class="texte inscription-lien">Inscrivez-vous</a>
                 </span>
-                <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
+                <a href="MotDePasse" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>
         </section>    
         <script src="js/js.js"></script>
