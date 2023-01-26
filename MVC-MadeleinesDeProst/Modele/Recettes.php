@@ -17,4 +17,15 @@
             }
             return self::$troisRecettes;
         }
+
+        public function donneToutesLesRecettes() {
+            $toutesLesRecettes = array();
+            $resultat = mysqli_query(BaseDeDonnes::connexion(), "SELECT * FROM RECETTE");
+            while ($row = mysqli_fetch_assoc($resultat)) {
+                array_push($toutesLesRecettes, $row);
+            }
+            return $resultat;
+        }
+
+
     }
