@@ -39,8 +39,8 @@
                 <input type="text" name="nom" placeholder="Entrez votre nom">
                 <input type="file" name="imgAjout" id="imgAjout" placeholder="Choissisez votre photo de profil">
                 <input type="text" name="email" placeholder="Entrez votre email">
-                <input type="text" name="mdp" placeholder="Entrez votre mot de passe">
-                <input type="text" name="mdpconfirm" placeholder="Confirmez votre mot de passe">
+                <input type="password" name="mdp" placeholder="Entrez votre mot de passe">
+                <input type="password" name="mdpconfirm" placeholder="Confirmez votre mot de passe">
                 <input type="submit" name="validerInscription" class="connexion" value="S\'inscrire">
                 <span class="text">Déja un compte ?
                     <a href="Connexion" class="texte inscription-lien">Connectez-vous</a>

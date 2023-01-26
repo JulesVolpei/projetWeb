@@ -37,12 +37,12 @@
             <form action="Connexion" method="post">
                 <span class="titre"> Connexion </span>
                 <input type="text" name="nom" placeholder="Entrez votre nom">
-                <input type="text" name="mdp" placeholder="Entrez votre mot de passe">
+                <input type="password" name="mdp" placeholder="Entrez votre mot de passe">
                 <input type="submit" name="connexion" class="connexion" value="Se connecter">
                 <span class="text">Pas de compte ? 
                     <a href="Inscription" class="texte inscription-lien">Inscrivez-vous</a>
                 </span>
-                <a href="MotDePasse" class="texte motDePasseOublie">Mot de passe oublié </a>
+                <a href="MotDePasseOublie" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>
         </section>    
         <script src="js/js.js"></script>
