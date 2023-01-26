@@ -13,15 +13,15 @@ class ModeleInscription
     }
 
     public static function verifyName($nom){
-
+        $result = null;
         $queryNom = mysqli_prepare(BaseDeDonnes::connexion(), "Select NOM FROM UTILISATEUR Where NOM = ?");
         mysqli_stmt_bind_param($queryNom, "s", $nom);
         mysqli_execute($queryNom);
-        mysqli_stmt_bind_result($queryNom, $nom);
+        mysqli_stmt_bind_result($queryNom, $result);
         mysqli_stmt_fetch($queryNom);
         mysqli_stmt_close($queryNom);
 
-        return $nom;
+        return $result;
     }
 
 }
