@@ -28,10 +28,10 @@ final class ControleurInscription
             } else 
                 echo "<script> alert('Le nom que vous avez choisi est déjà pris'); </script>";
 
-            Vue::montrer("inscription/inscription"); //amelioration possible : lancer ControleurConnexion
+            Vue::montrer("Inscription/inscription"); //amelioration possible : lancer Connexion
         } 
         else {
-            Vue::montrer("inscription/inscription");
+            Vue::montrer("Inscription/inscription");
         }
     }
 
@@ -102,7 +102,7 @@ final class ControleurInscription
             } else {
                 echo "Une erreur est survenue pendant l'upload de l'image";
             }
-            return $nouvCheminFichier;
+            return "https://madeleinedeprost.alwaysdata.net/" . $nouvCheminFichier;
         }
         return "erreur";
     }
@@ -112,6 +112,7 @@ final class ControleurInscription
         $image = imagecreatefromstring(file_get_contents($cheminFichier));
         imagewebp($image, $nouvCheminFichier, 75);
         imagedestroy($image);
+        unlink($cheminFichier);
     
     }
 
