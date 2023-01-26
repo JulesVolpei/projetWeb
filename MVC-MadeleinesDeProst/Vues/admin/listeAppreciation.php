@@ -1,19 +1,27 @@
 <?php
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        echo '<li id="utilisateur">' . $row["NOM_AUTEUR"] . '<br>' . $row["COMMENTAIRE"] .
-            '<form action=\"admin.php\" method=\"post\">' .
-            '<a class=\"icon-recette\">' .
-            '<input type=\"submit\" name=\"supprimerAppreciation\" value=\"&#x2715\">' .
-            '<input type=\"hidden\" name=\"idAppreciation\" value="' . $row['ID'] . '\">' .
-            '</a>' .
-            '<a class="icon-recette">' .
-            '<input type=\"submit\" name=\"desactiverAppreciation\" value=\"&#127985\">' .
-            '<input type=\"hidden\" name=\"idAppreciation\" value=\"' . $row['ID'] . '\">' .
-            '</a>' .
-            '<input type=\"text\" name=\"appreciationActivee\" value=\"' . $row['ACTIVEE'] . '\">' .
-            '</form>"' .
-            '</li>';
-    }
+echo '<article>' . 
+       '<ul>' ;
+foreach ($A_vue['appreciation'] as $row ) {
+    echo '<li>' . $row["NOM_AUTEUR"] .  $row["COMMENTAIRE"] .  
+        '<form action="Admin" method="post">' .
+        '<a class="icon-recette">' .
+        '<input type="submit" name="supprimerAppreciation" value="&#x2715">' .
+        '<input type="hidden" name="nom" value="' . $row["NOM"] . '">' .
+        '</a>' .
+        '<a class="icon-recette">' .
+        '<input type="submit" name="desactiverAppreciation" value="&#127985">' .
+        '<input type="hidden" name="nom" value="' . $row["NOM"] . '">' .
+        '</a>' .
+        '<input type="text" name="appreciationEstActivee" value="' . $row["ACTIVEE"] . '">' .
+        '</form>' .
+        '</li>';
 }
+
+echo '</ul>' .
+'</article>
+
+    </section>
+    <script src="js/js.js"></script>
+</body>
+
+</html>';

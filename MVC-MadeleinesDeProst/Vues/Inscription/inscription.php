@@ -45,7 +45,7 @@
                 <span class="text">Déja un compte ?
                     <a href="Inscription" class="texte inscription-lien">Connectez-vous</a>
                 </span>
-                <a href="MotDePasseOublie" class="texte motDePasseOublie">Mot de passe oublié </a>
+                <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>';
                 //ModeleInscription::inscription($nom);
             echo '
