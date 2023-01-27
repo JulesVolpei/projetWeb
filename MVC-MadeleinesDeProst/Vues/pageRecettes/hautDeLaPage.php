@@ -1,8 +1,8 @@
 <?php
 echo
-'<body>
+    '<body>
                       <header>
-                                <a href="index.html">
+                                <a href="Accueil">
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
                                 <div id="barreRecherche">
@@ -10,7 +10,7 @@ echo
                                         <input type="text" placeholder="Rechercher ..." name="recherche" id="champRecherche">
                                     </form>
                                 ';
-                            $A_vue['barreDeRecherche'];
+$A_vue['barreDeRecherche'];
 echo '
                                 </div>
                                 <nav id="navbar" class="nav">
