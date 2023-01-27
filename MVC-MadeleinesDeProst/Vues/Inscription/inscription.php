@@ -15,16 +15,16 @@
     
         <header>
     
-            <a href="index.html">
+            <a href="Accueil">
                 <h1>Les Madeleines de Prost</h1>
             </a>
             <nav id="navbar" class="nav">
-                <a id="onglet" href="recette.html"> <!-- A changer !!! -->
+                <a id="onglet" href="Recettes"> <!-- A changer !!! -->
                     <button>
                         Recettes
                     </button>
                 </a>
-                <a id="onglet" href="connexion.php"> <!-- A changer !!! -->
+                <a id="onglet" href="Connexion"> <!-- A changer !!! -->
                     <button>
                         Connexion <br> Inscription
                     </button>
@@ -45,7 +45,6 @@
                 <span class="text">Déja un compte ?
                     <a href="Inscription" class="texte inscription-lien">Connectez-vous</a>
                 </span>
-                <a href="motDePasseOublie.html" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>';
                 //ModeleInscription::inscription($nom);
             echo '
