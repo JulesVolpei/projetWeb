@@ -8,7 +8,7 @@ echo '
             <h1>Les Madeleines de Prost</h1>
         </a>
         <nav id="navbar" class="nav">
-            <a id="onglet" href="Recette"> <!-- A changer !!! -->
+            <a id="onglet" href="Recettes"> <!-- A changer !!! -->
                 <form action="Recettes" method="post">
                     <button type="submit">
                         Recettes
