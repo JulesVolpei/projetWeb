@@ -1,6 +1,6 @@
 <?php
-    echo
-            '<body>
+echo
+    '<body>
                       <header>
                                 <a href="index.html">
                                     <h1>Les Madeleines de Prost</h1>
@@ -11,11 +11,11 @@
                                     </form>
                                     <form action="Recettes" method="post">
                                 ';
-                                foreach($A_vue['barreDeRecherche'] as $row){
-                                    $row[0] = strtoupper($row[0]);
-                                    echo "<input type=\"submit\" class=\"recettePossible\" value=\"".$row."\" name=\"".$row."\"> ";
-                                }
-                                echo '
+foreach ($A_vue['barreDeRecherche'] as $row) {
+    $row[0] = strtoupper($row[0]);
+    echo "<input type=\"submit\" class=\"recettePossible\" value=\"" . $row . "\" name=\"" . $row . "\"> ";
+}
+echo '
                                 </form>  
                                 </div>
                                 <nav id="navbar" class="nav">
