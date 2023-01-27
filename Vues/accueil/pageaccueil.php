@@ -2,7 +2,7 @@
 echo
     '<body>
                       <header>
-                                <a href="index.html">
+                                <a href="Accueil">
                                     <h1>Les Madeleines de Prost</h1>
                                 </a>
                                 <div id="barreRecherche">
@@ -20,7 +20,7 @@ echo '
                                 </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
-                                        <form action="Recettes" method="post">
+                                        <form action="Recettes/afficheUneRecette" method="post">
                                             <button type="submit">
                                                 Recettes
                                             </button>
