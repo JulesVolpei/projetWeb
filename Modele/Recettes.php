@@ -48,18 +48,4 @@
             return $toutLesIngredients;
         }
 
-        public function donnePreparationRecette($idRecette) {
-            $preparation = array();
-            $resultat = mysqli_query(BaseDeDonnes::connexion(), "SELECT ETAPES FROM RECETTE WHERE RECETTE.ID = " . $idRecette);
-            while ($row  = mysqli_fetch_assoc($resultat)) {
-                foreach ($row as $partiePreparation) {
-                    $str = explode("Etape", $partiePreparation);
-                    foreach ($str as $etape) {
-                        array_push($preparation, $etape);
-                    }
-                }
-            }
-            return $preparation;
-        }
-
     }
