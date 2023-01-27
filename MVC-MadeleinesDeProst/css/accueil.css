@@ -2,29 +2,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
 
-body{
+body {
     background-color: #e7e7e7;
 }
 
-h2{
+h2 {
     font-size: 2.5em;
     font-family: 'Abril Fatface', cursive;
 
 }
 
-h3{
+h3 {
     font-size: 1.8em;
     color: #CAAD00;
 }
 
-h4{
+h4 {
     color: #000;
     font-size: 1.3em;
     font-family: 'Abril Fatface', cursive;
@@ -32,26 +32,26 @@ h4{
 
 /*--------------- Header --------------------*/
 
-header{
+header {
     margin: 10px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-h1{
+h1 {
     color: #000;
     font-family: 'Satisfy', cursive;
     font-size: 4em;
 }
 
-h1:hover{
+h1:hover {
     transition: ease 0.5s;
     color: #3f3937;
 }
 
 
-nav{
+nav {
     width: auto;
     height: 70px;
     background-color: #e7e7e7;
@@ -61,14 +61,14 @@ nav{
     flex-direction: row;
 }
 
-button{
+button {
     background-color: #000;
     color: #000;
     width: 100px;
     font-size: 1.2em;
 }
 
-nav a{
+nav a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -78,7 +78,7 @@ nav a{
     cursor: pointer;
 }
 
-nav a button{
+nav a button {
     padding: 0 20px;
     cursor: pointer;
     background-color: transparent;
@@ -89,20 +89,21 @@ nav a button{
     font-family: 'Abril Fatface', cursive;
 }
 
-nav .icon{
+nav .icon {
     display: none;
     color: #000;
 }
-#barreRecherche{
-    display:flex;
+
+#barreRecherche {
+    display: flex;
     flex-direction: column;
     border: solid 2px #000;
-    height:min-content;
+    height: min-content;
 }
 
-#champRecherche{
+#champRecherche {
     font-size: 1.3em;
-    border:0px;
+    border: 0px;
     border-bottom: solid 2px #000;
     background-color: white;
     background-image: url('https://cdn-icons-png.flaticon.com/512/8443/8443859.png');
@@ -110,7 +111,7 @@ nav .icon{
     padding-left: 30px;
 }
 
-.recettePossible{
+.recettePossible {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 100%;
@@ -118,13 +119,13 @@ nav .icon{
 
 /*----------------- Section ----------------*/
 
-section{
+section {
     margin-bottom: 40px;
     display: flex;
     flex-direction: column;
 }
 
-.img-recette{
+.img-recette {
     height: auto;
     font-size: 20px;
     color: white;
@@ -137,7 +138,13 @@ section{
 
 }
 
-.recette{
+.img-recette img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.recette {
     font-size: 20px;
     color: white;
     margin-left: 15vw;
@@ -152,11 +159,16 @@ section{
     justify-content: space-around;
 }
 
-.recette div h3, ul li{
+.recette div {
+    width: 300px;
+}
+
+.recette div h3,
+ul li {
     margin-bottom: 20px;
 }
 
-.recettes img{
+.recettes img {
     z-index: 1;
     width: 25%;
     position: relative;
@@ -167,26 +179,26 @@ section{
 /*------------------ Media --------------------*/
 
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 
-    header{
+    header {
         justify-content: flex-end;
     }
 
-    h1{
+    h1 {
         display: none;
     }
 
-    nav{
+    nav {
         width: 100%;
     }
 
-    nav a{
+    nav a {
         display: none;
         border: none;
     }
 
-    nav .icon{
+    nav .icon {
         display: block;
         position: absolute;
         right: 0;
@@ -196,31 +208,31 @@ section{
         padding: 0 !important;
     }
 
-    nav.responsive a{
+    nav.responsive a {
         display: block;
         width: 100%;
         padding: 10px 0;
         margin-left: 20px;
     }
 
-    nav.responsive #onglet:hover{
+    nav.responsive #onglet:hover {
         transition: ease 0.5s;
         background-color: #fff;
     }
 
-    nav.responsive button{
+    nav.responsive button {
         display: block;
         padding: 10px 0;
     }
 
-    nav{
+    nav {
         flex-direction: column-reverse;
         min-height: 70px;
         height: 100%;
         align-items: flex-start;
     }
 
-    .categories article div{
+    .categories article div {
         margin: 20px 20px;
     }
 }
