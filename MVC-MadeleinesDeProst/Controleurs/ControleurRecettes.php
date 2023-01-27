@@ -25,5 +25,6 @@ final class ControleurRecettes {
         Vue::montrer("pageRecettes/entetePourUneRecette");
         Vue::montrer("pageRecettes/afficheUneRecette", array("recette" => Recettes::donneLesRecettes()));
         Vue::montrer("pageRecettes/afficheIngredientUneRecette", array("ingredient" => $test->donneIngrédientRecette(Recettes::donneLesRecettes()[0]["ID"])));
+        Vue::montrer("pageRecettes/afficheEtape", array("preparation" => $test->donnePreparationRecette(Recettes::donneLesRecettes()[0]["ID"])));
     }
 }
