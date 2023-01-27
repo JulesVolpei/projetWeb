@@ -9,14 +9,18 @@ echo '
         </a>
         <nav id="navbar" class="nav">
             <a id="onglet" href="Recette"> <!-- A changer !!! -->
-                <button>
-                    Recettes
-                </button>
+                <form action="Recettes" method="post">
+                    <button type="submit">
+                        Recettes
+                    </button>
+                </form>
             </a>
             <a id="onglet" href="Inscription"> <!-- A changer !!! -->
-                <button>
-                    Connexion <br> Inscription
-                </button>
+                <form action="Inscription" method="post">
+                    <button type="submit">
+                        Connexion <br> Inscription
+                    </button>
+                </form>
             </a>
             <a class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
