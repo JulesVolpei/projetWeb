@@ -20,7 +20,7 @@ echo '
                                 </div>
                                 <nav id="navbar" class="nav">
                                     <a id="onglet"> <!-- A changer !!! -->
-                                        <form action="Recettes/afficheUneRecette" method="post">
+                                        <form action="Recettes" method="post">
                                             <button type="submit">
                                                 Recettes
                                             </button>

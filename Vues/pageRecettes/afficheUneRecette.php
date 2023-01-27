@@ -1,8 +1,8 @@
 <?php
-    echo '    <section>
-        <img id="image" src="'. $A_vue["recette"][0]["IMAGE"] .'">
+echo '    <section>
+        <img id="image" src="' . $A_vue["recette"][0]["IMAGE"] . '">
         <div class="encadrement">
-            <h2>Madeleine</h2>
+            <h2>' . $A_vue["recette"][0]["NOM"] . '</h2>
             <h3>Difficulté : ' . $A_vue["recette"][0]["DIFFICULTE"] . '| Temps : ' . $A_vue["recette"][0]["TEMPS"] . ' | Cout : ' . $A_vue["recette"][0]["COUT"] . '</h3><br>';
 
 //            </div>

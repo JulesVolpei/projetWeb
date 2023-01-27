@@ -1,5 +1,5 @@
-<?php 
-    echo '<!DOCTYPE html>
+<?php
+echo '<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -40,9 +40,8 @@
                 <input type="password" name="mdp" placeholder="Entrez votre mot de passe">
                 <input type="submit" name="connexion" class="connexion" value="Se connecter">
                 <span class="text">Pas de compte ? 
-                    <a href="Inscription" class="texte inscription-lien">Inscrivez-vous</a>
+                    <a href="Connexion" class="texte inscription-lien">Inscrivez-vous</a>
                 </span>
-                <a href="MotDePasseOublie" class="texte motDePasseOublie">Mot de passe oublié </a>
             <form>
         </section>    
         <script src="js/js.js"></script>
