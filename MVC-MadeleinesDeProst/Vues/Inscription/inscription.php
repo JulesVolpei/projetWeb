@@ -45,9 +45,7 @@
                 <span class="text">Déja un compte ?
                     <a href="Inscription" class="texte inscription-lien">Connectez-vous</a>
                 </span>
-            <form>';
-                //ModeleInscription::inscription($nom);
-            echo '
+            <form>
         </section>
         <script src="js/js.js"></script>
     </body>
