@@ -27,5 +27,25 @@
             return $resultat;
         }
 
+        public function donneIngrédientRecette($idRecette) {
+            $toutLesIngredients = array();
+            $resultat = mysqli_query(BaseDeDonnes::connexion(), "SELECT INGREDIENTS FROM RECETTE WHERE RECETTE.ID = " . $idRecette);
+            $ingredient = "";
+            $cmpt = 1;
+            while ($row = mysqli_fetch_assoc($resultat)) {
+                foreach ($row as $totalIngredient) {
+                    foreach (str_split($totalIngredient) as $lettreIngredient) {
+                        if ($lettreIngredient == ',') {
+                            array_push($toutLesIngredients, $ingredient);
+                            $ingredient = "";
+                        } else {
+                            $ingredient .= $lettreIngredient;
+                        }
+                    }
+                    $ingredient = "";
+                }
+            }
+            return $toutLesIngredients;
+        }
 
     }
